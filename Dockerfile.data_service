@@ -1,0 +1,5 @@
+# Dockerfile.data_service
+
+FROM python:3.8-slim
+
+COPY data_service.py /data_service.py
