@@ -1,0 +1,17 @@
+# .travis.yml
+
+language: python
+python:
+  - "3.8"
+
+services:
+  - docker
+
+before_script:
+  - docker-compose up -d --build
+
+script:
+  - docker-compose exec app python app.py
+
+after_script:
+  - docker-compose down
